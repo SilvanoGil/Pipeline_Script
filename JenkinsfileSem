@@ -9,6 +9,7 @@ pipeline {
 	stages {
         stage('Git') {
             steps {
+	       echo "Repositorio Git ${params.GIT_URL}"
                git "${params.GIT_URL}"
             }
         }
