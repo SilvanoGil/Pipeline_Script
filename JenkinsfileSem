@@ -37,7 +37,7 @@ pipeline {
 					//deploy adapters: [tomcat8(credentialsId: '42404ef5-561e-4b3e-849d-de3f5f738320', path: '', url: 'http://localhost:8081')], contextPath: null, war: '**/*.war'
                
                 }
-                failure{
+                allways{
                     echo 'Deploying DESA'
 					//deploy adapters: [tomcat8(credentialsId: '42404ef5-561e-4b3e-849d-de3f5f738320', path: '', url: 'http://localhost:8081')], contextPath: null, war: '**/*.war'
                
