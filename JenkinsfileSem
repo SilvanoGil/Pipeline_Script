@@ -1,12 +1,12 @@
 pipeline {
     agent any
+	parameters {
+        string(name: 'GIT_URL', defaultValue: '', description: 'RUTA REPOSITORIO GIT')
+	}
     tools {
         maven 'LocalMaven' 
     }
-	 parameters {
-        string(name: 'GIT_URL', defaultValue: '', description: 'RUTA REPOSITORIO GIT')
-	}
-    stages {
+	stages {
         stage('Git') {
             steps {
                 //git 'https://github.com/mai-67/curso_integracion_continua.git'
