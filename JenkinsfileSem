@@ -14,7 +14,7 @@ pipeline {
 				echo "REPOSITORIO: ${params.GIT}"
             }
         }
-        /*stage('Maven') {
+        stage('Maven') {
             steps {
                 bat 'mvn package'
                
@@ -46,8 +46,7 @@ pipeline {
                 }
             }
 			
-			
-        } */       		
-	      
+        }
+    	      
     }
 }
