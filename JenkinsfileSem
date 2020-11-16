@@ -10,10 +10,11 @@ pipeline {
         stage('Git') {
             steps {
                 //git 'https://github.com/mai-67/curso_integracion_continua.git'
-				git '${params.GIT}'
+				//git '${params.GIT}'
+				echo "REPOSITORIO: ${params.GIT}"
             }
         }
-        stage('Maven') {
+        /*stage('Maven') {
             steps {
                 bat 'mvn package'
                
@@ -46,8 +47,7 @@ pipeline {
             }
 			
 			
-        }
-        		
-		      
+        } */       		
+	      
     }
 }
