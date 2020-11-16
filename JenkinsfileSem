@@ -9,8 +9,7 @@ pipeline {
 	stages {
         stage('Git') {
             steps {
-                //git 'https://github.com/mai-67/curso_integracion_continua.git'
-				git "${params.GIT_URL}"
+               git "${params.GIT_URL}"
             }
         }
         stage('Maven') {
