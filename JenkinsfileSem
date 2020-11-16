@@ -4,19 +4,19 @@ pipeline {
         maven 'LocalMaven' 
     }
 	 parameters {
-        string(name: 'GIT', defaultValue: '', description: 'RUTA REPOSITORIO GIT')
+        string(name: 'GIT_URL', defaultValue: '', description: 'RUTA REPOSITORIO GIT')
 	}
     stages {
         stage('Git') {
             steps {
                 //git 'https://github.com/mai-67/curso_integracion_continua.git'
-				git "${params.GIT}"
+				git "${params.GIT_URL}"
             }
         }
         stage('Maven') {
             steps {
                 bat 'mvn package'
-            }
+			}
 		}
 		stage('PMD-CheckStyle') {
             input {
